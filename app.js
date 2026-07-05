@@ -1,9 +1,15 @@
 // ---------------------------------------------------------------------------
 // NAIROBI NIGHTOWLS — frontend logic
-// Talks to the Google Apps Script API defined in config.js (API_URL).
-// Falls back to local sample data if API_URL hasn't been set yet, so the
-// site is browsable immediately after cloning, before you wire up Sheets.
+// Talks to the Google Apps Script API. Falls back to local sample data if
+// API_URL hasn't been set yet, so the site is browsable immediately after
+// cloning, before you wire up Sheets.
 // ---------------------------------------------------------------------------
+
+// PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW.
+// It must end in /exec (not /dev), and the deployment must be set to
+// "Execute as: Me" / "Who has access: Anyone".
+// Example: "https://script.google.com/macros/s/AKfycb.../exec"
+const API_URL = "https://script.google.com/macros/s/AKfycbxUU1WlN1hLiHFdVnTBi0NFAY4qo-YkCOTzX_5_eFleXLjV3r22VdSmceBDSjAqTZwf/exec";
 
 const FALLBACK_PROFILES = [
   { id: "1", alias: "The Matatu Financier", sector: "Transport & Logistics", origin: "Started with one 14-seater on the Rongai route in 2003", note: "Now quietly owns a fleet management and insurance-financing operation serving over 40 SACCOs.", revealedAt: "23:41" },
