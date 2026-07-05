@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nairobi Nightowls</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-left">
+      <span class="moon">☾</span>
+      <span class="wordmark">Nairobi Nightowls</span>
+    </div>
+    <div class="nav-right">
+      <span id="clock" class="nav-clock">NAIROBI</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label">TONIGHT'S FIELD NOTE</div>
+    <div class="scan-wrap">
+      <div id="scan-ring" class="scan-ring"></div>
+      <div id="profile-card" class="profile-card">
+        <div class="profile-top">
+          <span id="p-sector" class="sector-tag">—</span>
+          <span id="p-time" class="timestamp">—</span>
+        </div>
+        <h1 id="p-alias" class="alias">Loading…</h1>
+        <p id="p-origin" class="origin"></p>
+        <p id="p-note" class="note-text"></p>
+        <div class="profile-actions">
+          <button id="follow-btn" class="follow-btn">+ Follow</button>
+          <button id="reveal-btn" class="ghost-btn">Reveal another ↗</button>
+        </div>
+      </div>
+    </div>
+    <p class="hero-foot">Illustrative profile · placeholder pending verified, opted-in submissions</p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-header-top"><span class="icon">📘</span><h2>Field Manuals</h2></div>
+      <p class="section-sub">Books & documents from the network</p>
+    </div>
+    <div id="books-grid" class="book-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-header-top"><span class="icon">👥</span><h2>Youth Groups</h2></div>
+      <p class="section-sub">Start or join a circle building together</p>
+    </div>
+    <div id="groups-row" class="groups-row"></div>
+    <button id="new-group-btn" class="new-group-card">+ Start a group</button>
+    <form id="group-form" class="group-form hidden">
+      <input id="group-name" class="input" placeholder="Group name" required />
+      <input id="group-focus" class="input" placeholder="What's the focus? (e.g. poultry trade)" />
+      <div style="display:flex; gap:8px;">
+        <button type="submit" class="submit-btn">Create group</button>
+        <button type="button" id="cancel-group-btn" class="ghost-btn">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-header-top"><span class="icon">💡</span><h2>Ideas Board</h2></div>
+      <p class="section-sub">Share, upvote, and find collaborators</p>
+    </div>
+    <form id="idea-form" class="idea-form">
+      <input id="idea-input" class="idea-input" placeholder="Share an idea or ask for collaborators..." required />
+      <button type="submit" class="submit-btn-small">Post</button>
+    </form>
+    <div id="ideas-list" class="ideas-list"></div>
+  </section>
+
+  <footer class="footer">
+    <p>Nairobi Nightowls — a network for the ones building quietly. Featured profiles are illustrative
+    placeholders; a live version would only display people who have verified and consented to be featured.</p>
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
